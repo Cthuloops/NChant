@@ -1,0 +1,66 @@
+# Project settings
+PROJECT_NAME            = @PROJECT_NAME@
+PROJECT_NUMBER          = @PROJECT_VERSION@
+PROJECT_BRIEF           = @PROJECT_BRIEF@
+
+# Input settings
+INPUT                   = @DOXYGEN_INPUT_DIR@/src \
+                          @DOXYGEN_INPUT_DIR@/include
+INPUT_ENCODING          = UTF-8
+FILE_PATTERNS           = *.cpp \
+                          *.hpp \
+                          *.h
+RECURSIVE               = YES
+EXCLUDE_PATTERNS        = */test/* \
+                          */build/* \
+                          */doctest.h \
+                          */doctest/* \
+                          *doctest*
+EXCLUDE_SYMBOLS         = doctest::* \
+                          *doctest*
+
+# Output settings
+OUTPUT_DIRECTORY        = @DOXYGEN_OUTPUT_DIR@
+GENERATE_HTML           = YES
+GENERATE_LATEX          = NO
+HTML_OUTPUT             = html
+
+# Documentation settings
+EXTRACT_ALL             = YES
+EXTRACT_PRIVATE         = YES
+EXTRACT_STATIC          = YES
+EXTRACT_LOCAL_CLASSES   = YES
+WARN_IF_UNDOCUMENTED    = YES
+WARN_NO_PARAMDOC        = YES
+
+# Diagram settings
+HAVE_DOT                = YES
+UML_LOOK                = YES
+CALL_GRAPH              = YES
+CALLER_GRAPH            = YES
+
+# Advanced settings
+OPTIMIZE_OUTPUT_FOR_C   = NO
+BUILTIN_STL_SUPPORT     = YES
+INLINE_SIMPLE_STRUCTS   = YES
+TYPEDEF_HIDES_STRUCTS   = NO
+GENERATE_TREEVIEW       = YES
+SORT_BRIEF_DOCS         = YES
+SORT_MEMBERS_CTORS_1ST  = YES
+
+# Examples settings
+EXAMPLE_PATH            = @DOXYGEN_INPUT_DIR@/examples
+EXAMPLE_PATTERNS        = *
+EXAMPLE_RECURSIVE       = YES
+
+# Layout
+LAYOUT_FILE             =
+TOC_INCLUDE_HEADINGS    = 5
+
+# Memory settings
+DOT_GRAPH_MAX_NODES  = 50
+
+# Filtering
+ENABLED_SECTIONS    = 
+EXCLUDE_SYMLINKS    = NO
+EXCLUDE_PAGES      = NO
